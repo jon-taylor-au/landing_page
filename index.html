@@ -37,8 +37,9 @@
     }
 
     .panel img {
-      max-width: 120px;
-      height: auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain; /* keeps aspect ratio without distortion */
     }
 
     /* Responsive: stack panels on small screens */
@@ -52,7 +53,7 @@
 <body>
   <div class="grid">
     <div class="panel"><img src="logo.png" alt="Logo 1"></div>
-    <div class="panel"><img src="logo1.png" alt="Logo 2"></div>
+    <div class="panel"><img src="logo2.png" alt="Logo 2"></div>
     <div class="panel"><img src="logo3.png" alt="Logo 3"></div>
     <div class="panel"><img src="logo4.png" alt="Logo 4"></div>
   </div>

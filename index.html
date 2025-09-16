@@ -2,34 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Landing Page</title>
+  <title>Gov.Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Reset & body */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f5f5f5;
-    }
-    .container {
-      text-align: center;
-    }
-    h1 {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
       color: #333;
     }
-    p {
-      color: #666;
+
+    /* Logo top left */
+    header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    /* Centered floating panel */
+    .panel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Panel heading & text */
+    .panel h1 {
+      color: #ff006e;
+      margin-bottom: 15px;
+    }
+
+    .panel p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Accent button (optional) */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: #fb5607;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffbe0b;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello, world!</h1>
-    <p>This is my very basic landing page.</p>
+  <!-- Logo -->
+  <header>
+    <img src="assets/logo.png" alt="Gov.Stream Logo">
+  </header>
+
+  <!-- Floating panel -->
+  <div class="panel">
+    <h1>Welcome to Gov.Stream</h1>
+    <p>
+      Streamlined solutions for government and regulated sectors.  
+      This is our new platform — simple, fast, and built with trust in mind.
+    </p>
+    <a href="#" class="btn">Learn More</a>
   </div>
 </body>
 </html>

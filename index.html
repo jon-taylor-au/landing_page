@@ -5,23 +5,22 @@
   <title>Gov.Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* light grey */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* align from top instead of exact center */
-    min-height: 100vh;       /* allow page to grow */
-    padding: 40px 0;         /* breathing room */
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
-    gap: 40px;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* light grey */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* start at top so nothing gets cut off */
+      min-height: 100vh;
+      padding: 40px 0;
+    }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* now 3 columns */
+      gap: 40px;
+    }
 
     .panel {
       background: rgba(255, 255, 255, 0.85);
@@ -39,25 +38,44 @@
     }
 
     .panel img {
-      width: 240px;
-      height: 240px;
-      object-fit: contain; /* keeps aspect ratio without distortion */
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    /* Bigger special panel */
+    .panel-large {
+      grid-column: span 2; /* takes 2 columns */
+      grid-row: span 2;    /* takes 2 rows */
+      width: 400px;
+      height: 400px;
+    }
+
+    .panel-large img {
+      width: 90%;
+      height: auto;
+      object-fit: contain;
     }
 
     /* Responsive: stack panels on small screens */
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       .grid {
         grid-template-columns: 1fr; /* single column */
+      }
+      .panel, .panel-large {
+        width: 100%;
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
   <div class="grid">
-    <div class="panel"><img src="logo.png" alt="Logo 1"></div>
+    <div class="panel"><img src="logo1.png" alt="Logo 1"></div>
     <div class="panel"><img src="logo2.png" alt="Logo 2"></div>
     <div class="panel"><img src="logo3.png" alt="Logo 3"></div>
-    <div class="panel"><img src="logo5.png" alt="Logo 4"></div>
+    <div class="panel"><img src="logo4.png" alt="Logo 4"></div>
+    <div class="panel panel-large"><img src="colour_scheme.png" alt="Color Scheme"></div>
   </div>
 </body>
 </html>

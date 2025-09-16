@@ -5,21 +5,23 @@
   <title>Gov.Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0; /* light grey */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* light grey */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* align from top instead of exact center */
+    min-height: 100vh;       /* allow page to grow */
+    padding: 40px 0;         /* breathing room */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
+    gap: 40px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
-      gap: 40px;
-    }
 
     .panel {
       background: rgba(255, 255, 255, 0.85);

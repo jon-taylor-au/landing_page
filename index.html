@@ -5,82 +5,33 @@
   <title>Gov.Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset & body */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      background-color: #f0f0f0; /* light grey */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    /* Logo top left */
-    header {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-    }
-
-    header img {
-      height: 180px;
-    }
-
-    /* Centered floating panel */
     .panel {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.85);
+      background: #ffffff; /* solid white */
       border-radius: 20px;
       padding: 40px;
-      max-width: 500px;
       text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
 
-    /* Panel heading & text */
-    .panel h1 {
-      color: #ff006e;
-      margin-bottom: 15px;
-    }
-
-    .panel p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Accent button (optional) */
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      border-radius: 30px;
-      background: #fb5607;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #ffbe0b;
-      color: #333;
+    .panel img {
+      max-width: 250px;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <!-- Logo -->
-  <header>
-    <img src="logo2.png" alt="Gov.Stream Logo">
-  </header>
-
-  <!-- Floating panel -->
   <div class="panel">
-    <h1>Welcome to gov.stream</h1>
-    <p>
-      This is our new platform — simple, fast, and built with trust in mind.
-    </p>
-    <a href="#" class="btn">Learn More</a>
+    <img src="assets/logo.png" alt="Gov.Stream Logo">
   </div>
 </body>
 </html>

@@ -16,7 +16,9 @@
     }
 
     .panel {
-      background: #ffffff; /* solid white */
+      background: rgba(255, 255, 255, 0.75); /* translucent white */
+      backdrop-filter: blur(10px); /* blur background behind panel */
+      -webkit-backdrop-filter: blur(10px); /* Safari support */
       border-radius: 20px;
       padding: 40px;
       text-align: center;

@@ -16,24 +16,32 @@
     }
 
     .panel {
-      background: rgba(255, 255, 255, 0.75); /* translucent white */
-      backdrop-filter: blur(10px); /* blur background behind panel */
-      -webkit-backdrop-filter: blur(10px); /* Safari support */
+      background: rgba(255, 255, 255, 0.85); /* translucent white */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-radius: 20px;
       padding: 40px;
       text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+      gap: 30px;
     }
 
     .panel img {
-      max-width: 250px;
+      max-width: 150px;
       height: auto;
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </head>
 <body>
   <div class="panel">
-    <img src="logo2.png" alt="Gov.Stream Logo">
+    <img src="logo.png" alt="Logo 1">
+    <img src="logo1.png" alt="Logo 2">
+    <img src="logo3.png" alt="Logo 3">
+    <img src="logo4.png" alt="Logo 4">
   </div>
 </body>
 </html>

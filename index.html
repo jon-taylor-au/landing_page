@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Gov.Stream</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0; /* light grey */
+      background-color: #f0f0f0;
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* start at top so nothing gets cut off */
+      align-items: flex-start;
       min-height: 100vh;
-      padding: 40px 0;
+      padding: 40px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* now 3 columns */
+      grid-template-columns: repeat(3, 1fr); /* Logo | Logo | Colours */
       gap: 40px;
+      max-width: 1200px;
+      width: 100%;
     }
 
     .panel {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
       padding: 30px;
       text-align: center;
@@ -33,49 +33,148 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 180px;
-      height: 180px;
+      flex-direction: column;
     }
 
     .panel img {
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-    }
-
-    /* Bigger special panel */
-    .panel-large {
-      grid-column: span 2; /* takes 2 columns */
-      grid-row: span 2;    /* takes 2 rows */
-      width: 400px;
-      height: 400px;
-    }
-
-    .panel-large img {
-      width: 90%;
+      max-width: 200px;
       height: auto;
       object-fit: contain;
     }
 
-    /* Responsive: stack panels on small screens */
-    @media (max-width: 800px) {
-      .grid {
-        grid-template-columns: 1fr; /* single column */
+    /* --- Aligned colour table --- */
+    .color-scheme {
+      text-align: left;
+    }
+
+    .color-scheme h2 {
+      text-align: center;
+      margin: 0 0 16px 0;
+      color: #003366;
+      font-size: 20px;
+    }
+
+    .color-table {
+      display: grid;
+      grid-template-columns: 48px 220px 130px 1fr; /* Swatch | Name | Hex | Meaning */
+      gap: 12px 16px;
+      align-items: center;
+    }
+
+    .row {
+      display: contents; /* lets children align to the parent grid columns */
+    }
+
+    .header {
+      font-weight: 700;
+      color: #4a4a4a;
+      opacity: 0.85;
+    }
+
+    .swatch-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      border: 1px solid #d9d9d9; /* keeps Soft White visible */
+    }
+
+    .name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .hex {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      background: #f7f7f7;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid #e5e5e5;
+      width: fit-content;
+    }
+
+    .meaning {
+      color: #555;
+      line-height: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .color-table {
+        grid-template-columns: 20px 1fr; /* stack Hex + Meaning under Name on small screens */
       }
-      .panel, .panel-large {
-        width: 100%;
-        height: auto;
-      }
+      /* On small screens, turn each row into a mini stack: Swatch | Name, then Hex, then Meaning */
+      .row .hex, .row .meaning { grid-column: 2 / -1; }
     }
   </style>
 </head>
 <body>
   <div class="grid">
-    <div class="panel"><img src="logo1.png" alt="Logo 1"></div>
-    <div class="panel"><img src="logo2.png" alt="Logo 2"></div>
-    <div class="panel"><img src="logo3.png" alt="Logo 3"></div>
-    <div class="panel"><img src="logo4.png" alt="Logo 4"></div>
-    <div class="panel panel-large"><img src="colour_scheme.png" alt="Color Scheme"></div>
+    <!-- Logo 1 -->
+    <div class="panel">
+      <img src="logo1.png" alt="Logo 1" />
+    </div>
+
+    <!-- Logo 2 -->
+    <div class="panel">
+      <img src="logo6.png" alt="Logo 2" />
+    </div>
+
+    <!-- Colour scheme -->
+    <div class="panel color-scheme">
+      <h2>Brand Colours</h2>
+
+      <div class="color-table">
+        <!-- Header -->
+        <div class="row header">
+          <div>Colour</div>
+          <div>Name</div>
+          <div>Hex</div>
+          <div>Meaning</div>
+        </div>
+
+        <!-- Commonwealth Blue -->
+        <div class="row">
+          <div><div class="swatch-box" style="background:#003366"></div></div>
+          <div class="name">Commonwealth Blue</div>
+          <div class="hex">#003366</div>
+          <div class="meaning">Trust, Stability, government legacy</div>
+        </div>
+
+        <!-- Slate Grey -->
+        <div class="row">
+          <div><div class="swatch-box" style="background:#4A4A4A"></div></div>
+          <div class="name">Slate Grey</div>
+          <div class="hex">#4A4A4A</div>
+          <div class="meaning">Professionalism, neutrality</div>
+        </div>
+
+        <!-- Signal Teal -->
+        <div class="row">
+          <div><div class="swatch-box" style="background:#009999"></div></div>
+          <div class="name">Signal Teal</div>
+          <div class="hex">#009999</div>
+          <div class="meaning">Modernity, tech-forward thinking</div>
+        </div>
+
+        <!-- Soft White -->
+        <div class="row">
+          <div><div class="swatch-box" style="background:#F4F4F4"></div></div>
+          <div class="name">Soft White</div>
+          <div class="hex">#F4F4F4</div>
+          <div class="meaning">Clarity, transparency</div>
+        </div>
+
+        <!-- Accent Gold -->
+        <div class="row">
+          <div><div class="swatch-box" style="background:#FFD700"></div></div>
+          <div class="name">Accent Gold</div>
+          <div class="hex">#FFD700</div>
+          <div class="meaning">Excellence, prestige</div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

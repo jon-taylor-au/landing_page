@@ -1,180 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gov.Stream</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Gov.Stream Brand Style Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 40px;
+      background-color: #F4F4F4; /* Soft White */
+      color: #4A4A4A; /* Slate Grey */
+      line-height: 1.6;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Logo | Logo | Colours */
-      gap: 40px;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .panel {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      padding: 30px;
+    header {
+      background-color: #003366; /* Commonwealth Blue */
+      color: #F4F4F4; /* Soft White */
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
     }
 
-    .panel img {
-      max-width: 200px;
+    header img {
+      max-width: 240px;
       height: auto;
-      object-fit: contain;
+      margin-bottom: 15px;
     }
 
-    /* --- Aligned colour table --- */
-    .color-scheme {
-      text-align: left;
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
     }
 
-    .color-scheme h2 {
-      text-align: center;
-      margin: 0 0 16px 0;
-      color: #003366;
-      font-size: 20px;
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    .color-table {
+    .palette {
       display: grid;
-      grid-template-columns: 48px 220px 130px 1fr; /* Swatch | Name | Hex | Meaning */
-      gap: 12px 16px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
     }
 
-    .row {
-      display: contents; /* lets children align to the parent grid columns */
+    .swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .header {
-      font-weight: 700;
-      color: #4a4a4a;
-      opacity: 0.85;
+    .swatch-color {
+      height: 80px;
     }
 
-    .swatch-box {
-      width: 40px;
-      height: 40px;
+    .swatch-info {
+      padding: 10px;
+      background: white;
+    }
+
+    .swatch-info strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .button-row {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
       border-radius: 6px;
-      border: 1px solid #d9d9d9; /* keeps Soft White visible */
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+      color: #fff;
     }
 
-    .name {
-      font-weight: 600;
-      color: #333;
-    }
+    .btn-blue { background: #003366; }
+    .btn-teal { background: #009999; }
+    .btn-gold { background: #FFD700; color: #003366; }
 
-    .hex {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 13px;
-      background: #f7f7f7;
-      padding: 2px 8px;
-      border-radius: 6px;
-      border: 1px solid #e5e5e5;
-      width: fit-content;
-    }
+    .btn:hover { opacity: 0.85; }
 
-    .meaning {
-      color: #555;
-      line-height: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-      .color-table {
-        grid-template-columns: 20px 1fr; /* stack Hex + Meaning under Name on small screens */
-      }
-      /* On small screens, turn each row into a mini stack: Swatch | Name, then Hex, then Meaning */
-      .row .hex, .row .meaning { grid-column: 2 / -1; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4A4A4A; /* Slate Grey */
+      color: #F4F4F4; /* Soft White */
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="grid">
-    <!-- Logo 1 -->
-    <div class="panel">
-      <img src="logo1.png" alt="Logo 1" />
-    </div>
+<header>
+  <div style="background:#FFFFFF; display:inline-block; padding:20px; border-radius:12px;">
+    <img src="logo1.png" alt="Gov.Stream Logo" style="max-width:240px; height:auto;">
+  </div>
+  <h1>Gov.Stream Brand Style Guide</h1>
+  <p>Showcasing our core colours in action</p>
+</header>
 
-    <!-- Logo 2 -->
-    <div class="panel">
-      <img src="logo7.png" alt="Logo 2" />
-    </div>
 
-    <!-- Colour scheme -->
-    <div class="panel color-scheme">
-      <h2>Brand Colours</h2>
-
-      <div class="color-table">
-        <!-- Header -->
-        <div class="row header">
-          <div>Colour</div>
-          <div>Name</div>
-          <div>Hex</div>
-          <div>Meaning</div>
+  <div class="section">
+    <h2>Colour Palette</h2>
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#003366"></div>
+        <div class="swatch-info">
+          <strong>Commonwealth Blue</strong>
+          <span>#003366</span><br>
+          <em>Trust, Stability, Govt legacy</em>
         </div>
-
-        <!-- Commonwealth Blue -->
-        <div class="row">
-          <div><div class="swatch-box" style="background:#003366"></div></div>
-          <div class="name">Commonwealth Blue</div>
-          <div class="hex">#003366</div>
-          <div class="meaning">Trust, Stability, government legacy</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A4A4A"></div>
+        <div class="swatch-info">
+          <strong>Slate Grey</strong>
+          <span>#4A4A4A</span><br>
+          <em>Professionalism, Neutrality</em>
         </div>
-
-        <!-- Slate Grey -->
-        <div class="row">
-          <div><div class="swatch-box" style="background:#4A4A4A"></div></div>
-          <div class="name">Slate Grey</div>
-          <div class="hex">#4A4A4A</div>
-          <div class="meaning">Professionalism, neutrality</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#009999"></div>
+        <div class="swatch-info">
+          <strong>Signal Teal</strong>
+          <span>#009999</span><br>
+          <em>Modernity, Tech-forward thinking</em>
         </div>
-
-        <!-- Signal Teal -->
-        <div class="row">
-          <div><div class="swatch-box" style="background:#009999"></div></div>
-          <div class="name">Signal Teal</div>
-          <div class="hex">#009999</div>
-          <div class="meaning">Modernity, tech-forward thinking</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F4F4F4"></div>
+        <div class="swatch-info">
+          <strong>Soft White</strong>
+          <span>#F4F4F4</span><br>
+          <em>Clarity, Transparency</em>
         </div>
-
-        <!-- Soft White -->
-        <div class="row">
-          <div><div class="swatch-box" style="background:#F4F4F4"></div></div>
-          <div class="name">Soft White</div>
-          <div class="hex">#F4F4F4</div>
-          <div class="meaning">Clarity, transparency</div>
-        </div>
-
-        <!-- Accent Gold -->
-        <div class="row">
-          <div><div class="swatch-box" style="background:#FFD700"></div></div>
-          <div class="name">Accent Gold</div>
-          <div class="hex">#FFD700</div>
-          <div class="meaning">Excellence, prestige</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FFD700"></div>
+        <div class="swatch-info">
+          <strong>Accent Gold</strong>
+          <span>#FFD700</span><br>
+          <em>Excellence, Prestige</em>
         </div>
       </div>
     </div>
+
+    <h2>Buttons in Action</h2>
+    <div class="button-row">
+      <a href="#" class="btn btn-blue">Primary (Blue)</a>
+      <a href="#" class="btn btn-teal">Secondary (Teal)</a>
+      <a href="#" class="btn btn-gold">Accent (Gold)</a>
+    </div>
   </div>
+
+  <footer>
+    © 2025 Gov.Stream — Built with our brand colours
+  </footer>
 </body>
 </html>

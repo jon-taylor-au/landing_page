@@ -4,160 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GovStream - Australian Government Document Search</title>
-    <meta
-      name="description"
-      content="Modern search platform for Australian government documents across multiple systems"
-    />
+    <meta name="description" content="Modern search platform for Australian government documents across multiple systems" />
 
     <!-- Social preview -->
     <meta property="og:title" content="GovStream – Built From Law, Then Code" />
-    <meta
-      property="og:description"
-      content="Modern search platform for Australian government documents."
-    />
+    <meta property="og:description" content="Modern search platform for Australian government documents across multiple systems." />
     <meta property="og:image" content="https://demo.govstream.com.au/logo.svg" />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary_large_image" />
 
-    <link
-      rel="icon"
-      href="https://demo.govstream.com.au/logo.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="https://demo.govstream.com.au/logo.svg" type="image/svg+xml" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       /* Page fade-in */
-      body {
-        opacity: 0;
-        animation: bodyFade 0.8s ease-out forwards;
-      }
-      @keyframes bodyFade {
-        to {
-          opacity: 1;
-        }
-      }
+      body { opacity: 0; animation: bodyFade 0.8s ease-out forwards; }
+      @keyframes bodyFade { to { opacity: 1; } }
 
       /* Element animations */
       @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
       }
-      .animate-fadeInUp {
-        animation: fadeInUp 1s ease-out forwards;
-      }
-      .animate-fadeInUp-delayed {
-        animation: fadeInUp 1s ease-out 0.3s forwards;
-      }
-      .animate-fadeInUp-delayed2 {
-        animation: fadeInUp 1s ease-out 0.6s forwards;
-      }
+      .animate-fadeInUp { animation: fadeInUp 1s ease-out forwards; }
+      .animate-fadeInUp-delayed { animation: fadeInUp 1s ease-out 0.3s forwards; }
+      .animate-fadeInUp-delayed2 { animation: fadeInUp 1s ease-out 0.6s forwards; }
     </style>
   </head>
 
-  <body
-    class="font-sans antialiased min-h-screen flex flex-col items-center justify-between text-gray-800 bg-gradient-to-b from-white to-[#F3F3F3]"
-  >
-    <!-- Main content -->
-    <main class="text-center pt-24">
+  <body class="font-sans antialiased min-h-screen flex flex-col items-center justify-between text-gray-800 bg-gradient-to-b from-white to-[#F3F3F3]">
+    <!-- Hero: logo + tagline only -->
+    <main class="text-center pt-24 px-6">
       <div class="flex flex-col items-center space-y-1 relative z-10">
         <div class="relative group inline-block">
-          <div
-            class="absolute inset-0 rounded-xl bg-gradient-to-r from-[#EB2188]/10 to-[#00BCDB]/10 blur-lg opacity-0 group-hover:opacity-100 transition duration-700"
-          ></div>
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-[#EB2188]/10 to-[#00BCDB]/10 blur-lg opacity-0 group-hover:opacity-100 transition duration-700"></div>
           <img
             src="https://demo.govstream.com.au/logo.svg"
             alt="GovStream"
             class="relative w-auto h-20 md:h-24 mx-auto opacity-0 animate-fadeInUp"
           />
         </div>
-        <p
-          class="text-sm uppercase tracking-[0.15em] text-[#9E9F9F] opacity-0 animate-fadeInUp-delayed -mt-1"
-        >
+        <p class="text-sm uppercase tracking-[0.15em] text-[#9E9F9F] opacity-0 animate-fadeInUp-delayed -mt-1">
           Built From Law, Then Code
         </p>
       </div>
     </main>
 
-    <!-- Footer: divider + socials + © -->
-    <footer
-      class="flex flex-col items-center gap-5 pb-[calc(10px+env(safe-area-inset-bottom))] opacity-0 animate-fadeInUp-delayed2"
-    >
-      <!-- Divider line -->
-      <div
-        class="h-px w-24 bg-gradient-to-r from-[#EB2188] to-[#00BCDB] opacity-70"
-      ></div>
+    <!-- Body blurb (two paragraphs, single column) -->
+    <section class="w-full px-6 mt-[1.25rem] flex justify-center">
+      <div class="max-w-2xl text-[15px] leading-relaxed text-gray-600 opacity-0 animate-fadeInUp-delayed2 text-left space-y-4">
+        <p>
+          GovStream is a wholly Australian technology company delivering risk-assured, secure and scalable technology solutions for the Australian Government.
+          GovStream brings together the expertise and resources of premium software development and AI technology firm
+          <span class="font-semibold text-[#3C1A5B]">Adaca</span>, and
+          <span class="font-semibold text-[#3C1A5B]">Sparke Helmore</span>—a leading provider of legal services to the Commonwealth.
+        </p>
+        <p>
+          Built from law, then code, GovStream’s solutions are designed by a multidisciplinary team involving government law experts with deep knowledge of Commonwealth laws, parameters and operations. Developed specifically for the Australian Government’s needs and frameworks and aligned with its digital, AI and cybersecurity policies, our solutions boost agency efficiency and effectiveness by streamlining workflows, supporting governance, enhancing decision-making and processes, and ensuring legal and operational integrity.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer: divider + socials + © (safe-area aware) -->
+    <footer class="flex flex-col items-center gap-5 pb-[calc(10px+env(safe-area-inset-bottom))] opacity-0 animate-fadeInUp-delayed2 mt-10">
+      <!-- Divider -->
+      <div class="h-px w-24 bg-gradient-to-r from-[#EB2188] to-[#00BCDB] opacity-70"></div>
 
       <!-- Social icons -->
       <div class="flex justify-center gap-8">
-        <!-- Email -->
-        <a
-          href="mailto:info@govstream.com"
-          aria-label="Email"
-          class="hover:scale-110 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="1.8"
-          >
+        <a href="mailto:info@govstream.com.au" aria-label="Email" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
             <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
             <polyline points="3 7 12 13 21 7"></polyline>
           </svg>
         </a>
-
-        <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/company/govstream"
-          target="_blank"
-          aria-label="LinkedIn"
-          class="hover:scale-110 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.1c.5-.9 1.8-2.2 3.8-2.2 4 0 4.8 2.6 4.8 6V24h-4v-8.4c0-2-.04-4.5-2.7-4.5-2.7 0-3.1 2.1-3.1 4.3V24h-4V8z"
-            />
+        <a href="https://www.linkedin.com/company/govstream-au" target="_blank" aria-label="LinkedIn" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.1c.5-.9 1.8-2.2 3.8-2.2 4 0 4.8 2.6 4.8 6V24h-4v-8.4c0-2-.04-4.5-2.7-4.5-2.7 0-3.1 2.1-3.1 4.3V24h-4V8z"/>
           </svg>
         </a>
-
-        <!-- X (Twitter) -->
-        <a
-          href="https://x.com/govstream"
-          target="_blank"
-          aria-label="X (Twitter)"
-          class="hover:scale-110 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.9 1.5h3.3l-7.2 8.2 8.5 12.3h-6.7l-5.2-7.6-5.9 7.6H2.4l7.7-8.9L1.9 1.5h6.9l4.7 6.9 5.4-6.9z"
-            />
+        <a href="https://x.com/gov_stream" target="_blank" aria-label="X (Twitter)" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#3C1A5B] hover:text-[#EB2188]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.9 1.5h3.3l-7.2 8.2 8.5 12.3h-6.7l-5.2-7.6-5.9 7.6H2.4l7.7-8.9L1.9 1.5h6.9l4.7 6.9 5.4-6.9z"/>
           </svg>
         </a>
       </div>
 
-      <!-- Micro footer text -->
-      <p class="text-[10px] text-gray-400 font-light">
-        © 2025 GovStream Pty Ltd
-      </p>
+      <p class="text-[10px] text-gray-400 font-light">© 2025 GovStream Pty Ltd</p>
     </footer>
   </body>
 </html>

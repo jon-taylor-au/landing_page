@@ -1,216 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Brand Style Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GovStream - Australian Government Document Search</title>
+    <meta
+      name="description"
+      content="Modern search platform for Australian government documents across multiple systems"
+    />
+    <link rel="icon" href="https://demo.govstream.com.au/logo.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Import Ubuntu font -->
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Ubuntu', sans-serif; /* Ubuntu everywhere */
-      background-color: #F4F4F4; /* Soft White */
-      color: #4A4A4A; /* Slate Grey */
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #003366; /* Commonwealth Blue */
-      color: #F4F4F4; /* Soft White */
-      padding: 1px;
-      position: relative;
-    }
-
-    /* Logo top-left */
-    header img.logo {
-      max-width: 120px;
-      height: auto;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    /* Title + tagline centered */
-    header h1,
-    header p {
-      text-align: center;
-      margin: 0;
-    }
-
-    header h1 {
-      font-size: 2.2em;
-      margin-top: 60px; /* pushes text below logo */
-      font-weight: 700; /* bold by default */
-    }
-
-    header p {
-      margin-top: 10px;
-      font-weight: 400;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .palette {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-    }
-
-    .swatch {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .swatch-color {
-      height: 80px;
-    }
-
-    .swatch-info {
-      padding: 10px;
-      background: white;
-    }
-
-    .swatch-info strong {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 500;
-    }
-
-    .button-row {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700; /* Ubuntu bold */
-      transition: opacity 0.3s;
-      color: #fff;
-    }
-
-    .btn-blue { background: #003366; }
-    .btn-teal { background: #009999; }
-    .btn-gold { background: #FFD700; color: #003366; }
-
-    .btn:hover { opacity: 0.85; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #4A4A4A; /* Slate Grey */
-      color: #F4F4F4; /* Soft White */
-      margin-top: 40px;
-      font-weight: 400;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      header img.logo {
-        max-width: 80px;
-        top: 15px;
-        left: 15px;
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-
-      header h1 {
-        font-size: 1.8em;
-        margin-top: 50px;
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
       }
-
-      .button-row {
-        flex-direction: column;
-        gap: 10px;
+      .animate-fadeInUp-delayed {
+        animation: fadeInUp 1s ease-out 0.3s forwards;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
+    </style>
+  </head>
 
-    <h1>Style Guide</h1>
-    <p>Showcasing our core colours in action</p>
-  </header>
+  <body
+    class="font-sans antialiased min-h-screen flex flex-col items-center justify-between text-gray-800 bg-gradient-to-b from-white to-[#F3F3F3]"
+  >
+    <!-- Main content -->
+    <main class="text-center pt-24">
+      <div class="flex flex-col items-center space-y-1">
+        <img
+          src="https://demo.govstream.com.au/logo.svg"
+          alt="GovStream"
+          class="w-auto h-20 md:h-24 mx-auto opacity-0 animate-fadeInUp"
+        />
+        <p
+          class="text-sm uppercase tracking-[0.15em] text-[#9E9F9F] opacity-0 animate-fadeInUp-delayed -mt-1"
+        >
+          Built From Law, Then Code
+        </p>
+      </div>
+    </main>
 
-  <div class="section">
-    <h2>Logo Variants</h2>
-    <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center;">
-      <div style="background:#F4F4F4; padding:20px; border-radius:12px; text-align:center;">
-        <img src="logo9.png" alt="Logo (Blue)" style="max-width:200px; height:auto;">
-        <p style="margin-top:10px;">Blue Logo on Soft White</p>
-      </div>
-      <div style="background:#003366; padding:20px; border-radius:12px; text-align:center;">
-        <img src="logo8.png" alt="Logo (Dark)" style="max-width:200px; height:auto;">
-        <p style="margin-top:10px; color:#F4F4F4;">Logo on Blue</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Colour Palette</h2>
-    <div class="palette">
-      <div class="swatch">
-        <div class="swatch-color" style="background:#003366"></div>
-        <div class="swatch-info">
-          <strong>Commonwealth Blue</strong>
-          <span>#003366</span><br>
-          <em>Trust, Stability</em>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#4A4A4A"></div>
-        <div class="swatch-info">
-          <strong>Slate Grey</strong>
-          <span>#4A4A4A</span><br>
-          <em>Professionalism, Neutrality</em>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#009999"></div>
-        <div class="swatch-info">
-          <strong>Signal Teal</strong>
-          <span>#009999</span><br>
-          <em>Modernity, Tech-forward thinking</em>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#F4F4F4"></div>
-        <div class="swatch-info">
-          <strong>Soft White</strong>
-          <span>#F4F4F4</span><br>
-          <em>Clarity, Transparency</em>
-        </div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-color" style="background:#FFD700"></div>
-        <div class="swatch-info">
-          <strong>Accent Gold</strong>
-          <span>#FFD700</span><br>
-          <em>Excellence, Prestige</em>
-        </div>
-      </div>
-    </div>
-
-    <h2>Buttons in Action</h2>
-    <div class="button-row">
-      <a href="#" class="btn btn-blue">Primary (Blue)</a>
-      <a href="#" class="btn btn-teal">Secondary (Teal)</a>
-      <a href="#" class="btn btn-gold">Accent (Gold)</a>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Gov.Stream — Built with our brand colours
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer
+      class="fixed bottom-6 text-xs text-gray-500 font-light flex flex-col items-center space-y-1"
+    >
+      <p>© 2025 GovStream Pty Ltd</p>
+      <a
+        href="mailto:info@govstream.com"
+        class="text-[#3C1A5B] hover:text-[#EB2188] transition-colors"
+      >
+        info@govstream.com
+      </a>
+    </footer>
+  </body>
 </html>
